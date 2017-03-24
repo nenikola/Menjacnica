@@ -62,8 +62,8 @@ public class Dan {
 	}
 	@Override
 	public String toString() {
-		return "Dan [datum=" + datum + ", prodajniKurs=" + prodajniKurs + ", kupovniKurs=" + kupovniKurs
-				+ ", srednjiKurs=" + srednjiKurs + "]";
+		return "Dan datum=" + datum + ", prodajniKurs=" + prodajniKurs + ", kupovniKurs=" + kupovniKurs
+				+ ", srednjiKurs=" + srednjiKurs ;
 	}
 	
 }

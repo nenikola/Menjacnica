@@ -50,7 +50,7 @@ public class Valuta implements interfejsMenjacnice {
 	}
 	@Override
 	public String toString() {
-		return "Valuta [naziv=" + naziv + ", skracenNaziv=" + skracenNaziv + ", kursevi=" + kursevi + "]";
+		return "Valuta naziv=" + naziv + ", skracenNaziv=" + skracenNaziv + ", kursevi=" + kursevi ;
 	}
 	@Override
 	public void dodajKurs(GregorianCalendar datum, double prodajni, double kupovni, double srednji) {
