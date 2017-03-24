@@ -11,20 +11,20 @@ public class Valuta {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
-		this.naziv = naziv;
+		if(naziv!=null)
+			this.naziv = naziv;
 	}
 	public String getSkracenNaziv() {
 		return skracenNaziv;
 	}
 	public void setSkracenNaziv(String skracenNaziv) {
-		this.skracenNaziv = skracenNaziv;
+		if(skracenNaziv!=null && skracenNaziv.length()==3)
+			this.skracenNaziv = skracenNaziv;
 	}
 	public LinkedList<Dan> getKursevi() {
 		return kursevi;
 	}
-	public void setKursevi(LinkedList<Dan> kursevi) {
-		this.kursevi = kursevi;
-	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
