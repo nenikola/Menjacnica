@@ -54,17 +54,26 @@ public class Valuta implements interfejsMenjacnice {
 	}
 	@Override
 	public void dodajKurs(GregorianCalendar datum, double prodajni, double kupovni, double srednji) {
-		// TODO Auto-generated method stub
-		
+		Dan noviKurs=new Dan();
+		noviKurs.setDatum(datum);
+		noviKurs.setKupovniKurs(kupovni);
+		noviKurs.setProdajniKurs(prodajni);
+		noviKurs.setSrednjiKurs(srednji);
+		this.kursevi.add(noviKurs);
 	}
 	@Override
 	public void obrisiKurs(GregorianCalendar datum) {
-		// TODO Auto-generated method stub
-		
+		for(int i=0;i<this.kursevi.size();i++){
+			if(this.kursevi.get(i).getDatum().equals(datum))
+				this.kursevi.remove(i);
+		}
 	}
 	@Override
 	public Dan pronadjiKurs(GregorianCalendar datum) {
-		// TODO Auto-generated method stub
+		for(int i=0;i<this.kursevi.size();i++){
+			if(this.kursevi.get(i).getDatum().equals(datum))
+				return this.kursevi.get(i);
+		}
 		return null;
 	}
 	
